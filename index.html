@@ -8,12 +8,280 @@
 
         </header>
         <section>
+            <h1>COVID-19 Questionnaire</h1>
             <article>
-                Forrm goes here
+                <form>
+                    <fieldset>
+                        <legend>Part I: General Information</legend>
+
+                        <p>
+                            <label for="first_name">
+                                <span>First Name:</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <input type="text" name="first_name" id="first_name" required>
+                        </p>
+    
+    
+                        <p>
+                            <label for="last_name">
+                                <span>Last Name:</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <input type="text" name="last_name" id="last_name" required>
+                        </p>
+    
+                        <div>
+                            <fieldset>
+                                <legend>Gender:</legend>
+                                <label for="radio_male">Male</label>
+                                <input type="radio" id="radio_male" name ="gender" value="male">
+    
+                                <label for="radio_female">Female</label>
+                                <input type="radio" id="radio_female" name ="gender" value="female">
+    
+                                <label for="radio_other">Other</label>
+                                <input type="radio" id="radio_other" name ="gender" value="other">
+                            </fieldset>
+                        </div>
+    
+                        <p>
+                            <label for="telephone">Telephone:</label>
+                            <input type="tel" id="telephone" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        </p>
+                        
+                        <p>
+                            <label for="email">
+                                <span>Email:</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <input type="email" id="email" name="email" required>
+                        </p>
+
+                        <p>
+                            <label for="street">Street:</label>
+                            <input type="text" id="street" name="street">
+
+                            <label for="apt">Apt:</label>
+                            <input type="text" id="apt" name="apt">
+
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="city">
+
+                            <label for="state">State:</label>
+                            <input type="text" id="state" name="state">
+
+                            <label for="zip">ZIP:</label>
+                            <input type="text" id="zip" name="zip" pattern="[0-9]{5}">
+                        </p>
+
+                        <p>
+                            <label for="dob">
+                                <span>DOB</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                                <input type="date" id="dob" name="dob" required>
+                            </label>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Part II: COVID Symptoms</legend>
+                        <h3>WARNING: It is your responsibility to answer honestly to the following questions</h3>
+                        <h4>Have you experienced any of the following symptoms within the last 24 hours?</h4>
+                        <p>
+                            <label for="fever">
+                                <span>Fever/Chills?</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <select id="fever" name="fever">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="cough">
+                                <span>Cough?</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <select id="cough" name="cough">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="breath">
+                                <span>Shorthness of breath or difficulty breathing?</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <select id="breath" name="breath">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="fatigue">
+                                <span>Fatigue?</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <select id="fatigue" name="fatigue">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="aches">
+                                <span>Muscle or body aches?</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <select id="aches" name="aches">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="headache">
+                                <span>Headache?</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <select id="headache" name="headache">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="sense">
+                                <span>Loss of taste or smell?</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <select id="sense" name="sense">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="throat">
+                                <span>Sore throat?</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <select id="throat" name="throat">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="nose">
+                                <span>Congestion or runny nose?</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <select id="nose" name="nose">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="nausea">
+                                <span>Nausea or vomiting?</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <select id="nausea" name="nausea">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="diarrhea">
+                                <span>Diarrhea?</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <select id="diarrhea" name="diarrhea">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </p>
+                        
+                    </fieldset>
+                    <fieldset>
+                        <legend>Part III: Other Questions</legend>
+                        <h3>WARNING: It is your responsibility to answer honestly to the following questions</h3>
+                        <p>
+                            <label for="contact">
+                                <span>Have you had contact (within 6 feet for more than 15 minutes), or caring for someone who is
+                                     diagnosed with COVID-19 in the last 14 days and were not wearing proper personal protective equipment?</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <br>
+                            <select id="contact" name="contact">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="diagnosis">
+                                <span>Have you had diagnosis of of COVID-19 in the last 10 days?</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <select name="diagnosis" id="diagnosis">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="travel">
+                                <span>Have you travelled to any country in the past 14 days?</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <select name="travel" id="travel">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                            <label for="countries">
+                                <span>Enter visited countries (separate each country with a comma)</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <input type="text" name="countries" id="countries">
+                        </p>
+
+                        <p>
+                            <label for="socialized">
+                                <span>Have you socialized with a group of 6 or more people in the last 14 days?</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <select name="socialized" id="socialized">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="temp">
+                                <span>Enter your current temperature in degrees Fahrenheit</span>
+                                <strong><abbr title="required">*</abbr></strong>
+                            </label>
+                            <input type="text" name="temp" id="temp" pattern="([0-9]{1,3})|([0-9]{1,3}\.[0-9]{1,2})" required>
+                        </p>                       
+                    </fieldset>
+
+                    <p>
+                        <input type="submit">
+                        <input type="reset">
+                    </p>
+
+                </form>
             </article>
         </section>
         <footer>
-            
+
         </footer>
     </body>
-</html>>
+</html>
