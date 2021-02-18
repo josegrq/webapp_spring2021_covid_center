@@ -3,6 +3,8 @@
     <head>
         <title>COVID Center Patient Form</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style.css">
+        <script src="./script.js"></script>
     </head>
     <body>
         <header>
@@ -12,7 +14,7 @@
 
             <h1 class="alert alert-primary">COVID-19 Questionnaire</h1>
             <article>
-                <form>
+                <form onsubmit="return validForm()" id="covid-form" novalidate>
                     <!--Start of part one-->
                     <fieldset class="border">
                         <legend class="w-auto">Part I: General Information</legend>
@@ -154,8 +156,14 @@
                                         <strong><abbr title="required">*</abbr></strong>
                                     </label>
                                 </div>
-                                <div class="col-sm-10">
+                                <div class="col-sm-10 ">
                                     <input type="date" id="dob" name="dob" required class="form-control">
+                                </div>
+                            </div>
+                            <div id="error-row" class="row invisible">
+                                <div class="col-sm-2">
+                                </div>
+                                <div id="error-msg" class="col-sm-10 error">
                                 </div>
                             </div>
                         </div>
@@ -457,23 +465,25 @@
                                     </label>
                                 </div>
                                 <div class="col-sm-2">
-                                    <select name="travel" id="travel" class="form-control">
-                                        <option value="no" selected>No</option>
-                                        <option value="yes">Yes</option>
+                                    <select name="travel" id="travel" class="form-control" onchange="travelled()">
+                                        <option value="No" selected>No</option>
+                                        <option value="Yes">Yes</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <label for="countries">
-                                        <span>Enter visited countries (separate each country with a comma)</span>
-                                        <strong><abbr title="required">*</abbr></strong>
-                                    </label>
+                            <div class="invisible" id="travelled-countries">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <label for="countries">
+                                            <span>Enter visited countries (separate each country with a comma)</span>
+                                            <strong><abbr title="required">*</abbr></strong>
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <input type="text" name="countries" id="countries" class="form-control">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input type="text" name="countries" id="countries" class="form-control">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -525,7 +535,7 @@
 
                     <div class="row">
                         <div class="col-sm-2"></div>
-                        <input type="submit" class="btn btn-success col-sm-2">
+                        <input type="submit" for class="btn btn-success col-sm-2">
                         <div class="col-sm-4"></div>
                         <input type="reset" class="btn btn-danger col-sm-2">
                         <div class="col-sm-2"></div>
@@ -539,5 +549,6 @@
         <footer>
 
         </footer>
+        <script src="./script.js"></script>
     </body>
 </html>
